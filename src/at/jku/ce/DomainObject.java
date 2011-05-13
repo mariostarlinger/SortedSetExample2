@@ -2,7 +2,7 @@ package at.jku.ce;
 
 public class DomainObject {
 
-	public String id;
+	public String uuid;
 	private String name;
 
 	/**
@@ -13,13 +13,13 @@ public class DomainObject {
 		super();
 	}
 
-	public DomainObject(String id) {
+	public DomainObject(String uuid) {
 		super();
-		this.id = id;
+		this.uuid = uuid;
 	}
 	
-	public String getId() {
-		return id;
+	public String getUuId() {
+		return uuid;
 	}
 
 }
