@@ -39,9 +39,11 @@ public class DomainObject {
 	public void setName(final String name) {
    		this.name = name;
 	}
+
 	public String toString() {
    		return "DomainObject [name=" + name + ", comment=" + comment + ", uuid=" + uuid + "]";
 	}
+
 	public boolean equals(Object obj) {
    		if (!(obj instanceof DomainObject)) {
      			 return false;
@@ -50,4 +52,11 @@ public class DomainObject {
   		return uuid.equals(domainObj.getUuid());
 	}
 
+	public int hashCode() {
+   		if (uuid != null) {
+      			return uuid.hashCode();
+   		} else {
+      			return super.hashCode();
+   		}
+	}
 }
