@@ -8,11 +8,11 @@ public class Main {
 	
 	Set<DomainObject> objectSet = new HashSet<DomainObject>();
 
-	objectSet.add(new DomainObject("Helga", "Das ist mein Kommentar."));
-	objectSet.add(new DomainObject("Walter", "Das ist mein Kommentar."));
-	objectSet.add(new DomainObject("Hannah", "Das ist mein Kommentar."));
-	objectSet.add(new DomainObject("Paul", "Das ist mein Kommentar."));
-	objectSet.add(new DomainObject("Claudia", "Das ist mein Kommentar."));
+	objectSet.add(DomainFactory.createDomainObject("Helga", "Das ist mein Kommentar."));
+	objectSet.add(DomainFactory.createDomainObject("Walter", "Das ist mein Kommentar."));
+	objectSet.add(DomainFactory.createDomainObject("Hannah", "Das ist mein Kommentar."));
+	objectSet.add(DomainFactory.createDomainObject("Paul", "Das ist mein Kommentar."));
+	objectSet.add(DomainFactory.createDomainObject("Claudia", "Das ist mein Kommentar."));
 
 	for (DomainObject domainObject : objectSet) {
 	  LOGGER.debug(domainObject.getUuid());
