@@ -6,7 +6,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 	
-	Set<DomainObject> objectSet = new HashSet<DomainObject>();
+	Set<DomainObject> objectSet = new TreeSet<DomainObject>(new DomainObjectComparator());
 
 	objectSet.add(new DomainObject("Helga", "Das ist mein Kommentar."));
 	objectSet.add(new DomainObject("Walter", "Das ist mein Kommentar."));
